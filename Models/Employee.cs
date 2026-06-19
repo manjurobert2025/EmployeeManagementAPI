@@ -1,12 +1,15 @@
-﻿namespace EmployeeManagementAPI.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace EmployeeManagementAPI.Models
 {
     public class Employee
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Department { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Department { get; set; } = string.Empty;
         public decimal Salary { get; set; }
-        public string Email { get; set; }
+        [Required]
+        public string Email { get; set; } = string.Empty;
 
     }
 }
